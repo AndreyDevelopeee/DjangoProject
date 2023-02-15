@@ -1,0 +1,33 @@
+
+<style>
+    label {margin-left: 500px;}
+    input {margin-left: 500px;}
+    button {margin-left: 500px;}
+</style>
+<script>
+    function myFunction(){
+        let login = document.getElementById("myinput").value;
+        let pass = document.getElementById("mypass").value;
+        if (login == "lenkovec" && pass == "1111"){
+            alert("Авторизация прошла успешно")
+        }else{
+            alert("Неверные данные")
+        }
+    }
+</script>
+<form>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+  <label>Авторизация</label><br><br>
+    <input id="myinput" type="text" placeholder="Введите логин"><br><br>
+    <input id="mypass" type="text"  placeholder="Введите пароль"><br><br>
+    <button onclick="myFunction()">Войти</button><br><br>
+    <div id="str"></div>
+
+</form>
+
+{% for i in tasks%}
+        {% if i.title == 'Отпуск' %}
+        {% endif %}
+{% endfor %}
+
+

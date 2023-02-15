@@ -1,0 +1,24 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>Сотрудники</h1>
+{% if employes %}
+{% for i in employes%}
+<div class="alert alert-warning mt-2">
+    <h3>ФИО: {{i.name}}</h3>
+    <p>Фото: {{i.img}}</p>
+    <p>Возраст: {{i.age}}</p>
+    <p>Специальность: {{i.major}}</p>
+    <p>Стаж: {{i.staz}}</p>
+    <p>ЗП: {{i.salary}}</p>
+</div>
+{% endfor %}
+{% else%}
+    <p>Нету записей</p>
+{% endif %}
+{% endblock %}
+

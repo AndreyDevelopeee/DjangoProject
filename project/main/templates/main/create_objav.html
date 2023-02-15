@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Создать обьявление
+{% endblock %}
+
+{% block content %}
+<h1>Создать обьявление</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.adress }}<br>
+    {{ form.price }}<br>
+    {{ form.decribe }}<br>
+    {{ form.count_room }}<br>
+    {{ form.type_hous }}<br>
+    {{ form.img }}<br>
+    <input type="submit" value="Submit">
+
+    <button type="submit" class="btn btn-success">Добавить обьявление</button>
+    <span>{{ error }}</span>
+</form>
+
+{% endblock %}

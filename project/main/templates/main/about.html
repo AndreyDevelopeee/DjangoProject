@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>Добавленные обьявления</h1>
+{% if all_objav %}
+{% for i in all_objav%}
+<div class="alert alert-warning mt-2">
+    <h3>Адрес: {{i.adress}}</h3>
+    <p>Цена: {{i.price}}</p>
+    <p>Описание: {{i.decribe}}</p>
+    <p>Кол-во комнат: {{i.count_room}}</p>
+    <p>Тип дома: {{i.type_hous}}</p>
+    <p>Фото: {{i.img}}</p>
+</div>
+{% endfor %}
+{% else%}
+    <p>Нету записей</p>
+{% endif %}
+{% endblock %}
+
+
+
